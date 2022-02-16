@@ -1,10 +1,8 @@
 \section{Hash Map}
 \begin{figure}[H]
-        \centerline{\includegraphics[scale=0.5]{figures/hash-tables/hash-function}}
-        \caption{Hash Function}
+        \centerline{\includegraphics[scale=0.5]{figures/hash-map/hash-function}}
+        \caption{Hash Map}
 \end{figure}
-Dalam komputasi, tabel hash (hash map) adalah struktur data yang mengimplementasikan tipe data abstrak array asosiatif, struktur yang dapat memetakan kunci ke nilai. Tabel hash menggunakan fungsi hash untuk menghitung indeks, juga disebut kode hash, ke dalam array atau slot, dimana nilai yang diinginkan dapat ditemukan. Selama pencarian, key akan di-hash dan hash yang dihasilkan akan menunjukkan di mana nilai yang disimpan berdasarkan hash dari key. Idealnya, fungsi hash akan menetapkan setiap key ke wadah yang unik, tetapi sebagian besar desain tabel hash menggunakan fungsi hash yang tidak sempurna, yang dapat menyebabkan tabrakan hash di mana fungsi hash menghasilkan indeks yang sama untuk lebih dari satu kunci. Tabrakan seperti itu biasanya diakomodasi dalam beberapa cara. Dalam tabel hash berdimensi baik, biaya rata-rata (jumlah instruksi) untuk setiap pencarian tidak tergantung pada jumlah elemen yang disimpan dalam tabel. Banyak desain tabel hash juga memungkinkan penyisipan dan penghapusan pasangan kunci-nilai sewenang-wenang, dengan biaya rata-rata konstan (diamortisasi) per operasi. Dalam banyak situasi, tabel hash ternyata rata-rata lebih efisien daripada pohon pencarian atau struktur pencarian tabel lainnya. Untuk alasan ini, mereka banyak digunakan di berbagai jenis perangkat lunak komputer, terutama untuk array asosiatif, pengindeksan basis data, cache, dan set.
-
 Hash Map merupakan struktur data yang memiliki indeks. Hash map menggunakan fungsi hash untuk menghitung indeks dengan key ke dalam buckets atau slot. Nilainya dipetakan ke buckets dengan indeks yang sesuai dan key yang unik dan tidak berubah. Kita ibaratkan has map dengan sebuah lemari yang memiliki laci dengan label untuk barang-barang yang disimpan di dalamnya. Misalnya, menyimpan infoemasi pengguna dan email sebagai keynya, dan kita dapat memetakan nilai yang terkait dengan pengguna tersebut seperti nama depan, nama belakang, dll ke dalam buckets.
 
 Hashmap adalah tipe struktur data yang memetakan kunci ke pasangan nilainya (menerapkan tipe data array abstrak). Ini pada dasarnya menggunakan fungsi yang menghitung nilai indeks yang pada gilirannya menyimpan elemen yang akan dicari, dimasukkan, dihapus, dll. Ini membuatnya mudah dan cepat untuk mengakses data. Secara umum, tabel hash menyimpan pasangan key value dan key tersebut dihasilkan menggunakan fungsi hash. Jadi fungsi pencarian dan penyisipan elemen data menjadi lebih cepat karena nilai key itu sendiri menjadi indeks yang menyimpan data.
@@ -285,13 +283,12 @@ emp_details = {'Employee': {'Dave': {'ID': '001',
                                     'Designation': 'Hadoop Developer'}}}
 df=pd.DataFrame(emp_details['Employee'])
 print(df)
+\end{lstlisting}
+
 Output:
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.3]{figures/output}
+    \includegraphics[scale=0.3]{figures/hash-map/output}
     \caption{\textit{Output Dictionary}}
     \label{colab6}
 \end{figure}
-\end{lstlisting}
-
-
